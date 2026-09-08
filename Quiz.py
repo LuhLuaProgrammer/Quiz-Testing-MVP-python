@@ -1,11 +1,12 @@
-Options = [
-    "Quit",
-    "SelectDifficulty",
-    "ViewQuestions"
-]
+Options = { "Options": "Quit",
+           "Options": "SelectDifficulty",
+            "Options": "ViewQuestions"
+}
+
+#DifficultySelection
 
 def SelectDifficultyFunction():
-    print("Select the difficulty")
+    print("Welcome to the difficulty Selection")
 
 def ViewQuestionsFunction():
     print("Display all the questions here later")
@@ -23,13 +24,13 @@ def MainMenu():
         if str.lower(UserChoice) == str.lower(Selection):
             print(Selection)
             print("test does this work")
-            if str.lower(UserChoice) == str.lower(Options[0]):
+            if str.lower(UserChoice) == str.lower(Options["Quit"]):
                 print("Goodbye!")
                 return
-            elif str.lower(UserChoice) == str.lower(Options[1]):
+            elif str.lower(UserChoice) == str.lower(Options["SelectDifficulty"]):
                 SelectDifficultyFunction()
                 return
-            elif str.lower(UserChoice) == str.lower(Options[2]):
+            elif str.lower(UserChoice) == str.lower(Options["ViewQuestions"]):
                 ViewQuestionsFunction()
                 return
     print("Try again you need to select an option provided by typing it in")
